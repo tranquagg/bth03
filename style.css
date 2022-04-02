@@ -18,14 +18,14 @@ a {
     text-decoration: none;
 }
 .container-full {
-    width: var(--large-width);
+    max-width: var(--large-width);
 }
 .container {
-    width:var(--normal-width);
+    max-width: var(--normal-width);
     margin:auto;
 }
 .header {
-    background-image: url(../images/background.png);
+    background-image: url(./images/background.png);
     color:#fff;
 }
 .header a {
@@ -53,7 +53,7 @@ a {
     list-style: none;
 }
 .header li {
-    display: inline-table;
+    display: inline-block;
 }
 .header li+li {
     margin-left:20px;
@@ -70,7 +70,6 @@ a {
 }
 
 .banner {
-    height:320px;
     color:#fff;
     background-color: var(--primary-color);    
 }
@@ -87,9 +86,9 @@ a {
 .banner-connect-form {
     margin-top:30px;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 47.5% 47.5%;
     row-gap: 5px;
-    column-gap: 15px;
+    column-gap: 5%;
 }
 .connect-title {
     grid-column: 1/3;
@@ -108,6 +107,7 @@ a {
     border:none;
     padding:5px;
     color:#fff;
+    outline: none;
 }
 .banner-connect-form button {
     background: transparent;
@@ -115,6 +115,13 @@ a {
     color:#EA6645;
     padding:8px 15px 8px 15px;
 }
+.banner-connect-form button:hover{
+    background-color:#EA6645 ;
+    color:#000;
+    border:2px solid #000;
+
+}
+
 
 .container-3col{
     display: grid;
@@ -189,7 +196,7 @@ a {
     color:#9f9f9f;
 }
 .news-item{
-    width: 360px;
+    max-width: 360px;
     border-bottom: 1px solid rgba(159,159,159,0.2);
 }
 .news-item a{
@@ -221,6 +228,10 @@ a {
     color: #042e6e;
 
 }
+.content-news a:hover{
+    opacity: 0.6;
+}
+
 
 .datetime{
     position: relative;
@@ -236,7 +247,7 @@ a {
     font-size: 5em;
     font-weight: bold;
     position: absolute;
-    left: 16px;
+    left: 15px;
     top: 8px;
 
 }
@@ -257,22 +268,47 @@ a {
 .list-department li{
     padding-top: 18px;
 }
-.list-department li a{
+.list-department a{
     text-decoration: none;
     color:#fff;
     font-size: 13px;
     font-weight: 300;   
 }
+.list-department a:hover{
+    opacity: 0.6;
+}
 .list-image{
     display: grid;
-    grid-template-columns: repeat(7,100px);
+    grid-template-columns: repeat(auto-fill,100px);
     grid-template-rows: 100px 100px;
     gap:7px;
     margin-top: 30px;
 }
+.image-item{
+    position: relative;
+
+}
 .image-item img{
     width: 100px;
     height: 100px; 
+}
+.eye-hover{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    background-color: #000;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    line-height: 30px;
+    font-size: 18px;
+    border-radius: 60%;
+    display: none;
+}
+.image-item:hover .eye-hover{
+    display: block;
 }
 .hot-person{
     margin-top: 30px;
@@ -300,6 +336,10 @@ a {
     position: relative;
     margin-top: 3px;
 }
+.person-detail .name:hover{
+    opacity: 0.6;
+}
+
 .person-detail .tie{
     margin-top: 25px;
     color:#ccc;
@@ -319,10 +359,13 @@ a {
 .list-link{
     padding-left: 20px;
 }  
-.list-link li a{
+.list-link a{
     font-size: 1em;
     color:#fff;
     line-height: 1.6;
+}
+.list-link a:hover{
+    opacity: 0.6;
 }
 .footer-top{
     height: 280px;
@@ -330,3 +373,5 @@ a {
 .gallery{
     height: 300px;
 }
+
+
