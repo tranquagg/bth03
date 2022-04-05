@@ -307,8 +307,13 @@ a {
     border-radius: 60%;
     display: none;
 }
-.image-item:hover .eye-hover{
+ .image-item:hover .eye-hover{
     display: block;
+    
+} 
+.image-item:hover .image-container{
+    transform: translateY(-0.1rem);
+
 }
 .hot-person{
     margin-top: 30px;
