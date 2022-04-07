@@ -286,7 +286,7 @@ a {
 }
 .image-item{
     position: relative;
-
+    cursor: pointer;
 }
 .image-item img{
     width: 100px;
@@ -312,7 +312,8 @@ a {
     
 } 
 .image-item:hover .image-container{
-    transform: translateY(-0.1rem);
+    /* transform: translateY(-0.1rem); */
+    transform: scale(0.9);
 
 }
 .hot-person{
